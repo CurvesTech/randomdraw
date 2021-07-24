@@ -9,11 +9,14 @@
       <div class="p-20" v-if="list.length > 0">
         <div class="list_box">
           <ul>
-            <li :key="item" v-for="(item, index) in list">
-              <span class="number">{{parseInt(index) + 1}}.</span>  
-              <span class="name">
-                &nbsp; {{ item }}
-              </span>
+            <li class="list_item" :key="item" v-for="(item, index) in list">
+              <div >
+                <span class="number">{{parseInt(index) + 1}}.</span>  
+                <span class="name">
+                  &nbsp; {{ item }}
+                </span>
+              </div>
+              <i @click="removeItemFromList(index)">&times;</i>
             </li>
           </ul>
           <div class="draw-box text-center">
@@ -51,11 +54,7 @@ export default {
     return {
       name: '',
       list: [
-        'Qaiser',
-        'Mubashar',
-        'Waqas',
-        'Shana',
-        'Zubair',
+        
       ],
       drawCount: 1,
       pickedIndexes: []
@@ -65,6 +64,11 @@ export default {
     Modal
   },
   methods: {
+    removeItemFromList(index) {
+      this.list.splice(index, 1);
+      this.pickedIndexes = [];
+      this.drawCount = 1;
+    },
     closeModal() {
       this.pickedIndexes = [];
     },
@@ -85,7 +89,7 @@ export default {
       } 
     },
     getRandomIndex(min, max) {
-      return Math.random() * (max - min) + min;
+      return Math.random() * (max - min + 1);
     },
     draw() {
       this.pickedIndexes = [];
@@ -110,6 +114,14 @@ export default {
 </script>
 
 <style scoped>
+  .list_item {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+  }
+  .list_item i {
+    font-size: 30px;
+  }
   .mt-10 {
     margin-top: 10px;
   }
@@ -140,10 +152,9 @@ export default {
     flex: 2;
   }
 
-  
-
   #content-box {
-    min-height: 50vh;
+    min-height: 80vh;
+    overflow:auto;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -161,8 +172,6 @@ export default {
     100% {
       opacity: 1;
     }
-
-
   }
 
   .p-20 {
@@ -259,6 +268,12 @@ export default {
     #content-box > div{
       width: 100%;
       box-sizing: border-box;
+    }
+    .list_box {
+      display: block;
+    }
+    .draw-box {
+      margin-top: 30px;
     }
   }
 </style>

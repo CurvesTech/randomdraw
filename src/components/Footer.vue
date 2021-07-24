@@ -19,13 +19,13 @@ export default {
   footer {
     background: purple;
     color: white;
-    height: 15vh;
+    min-height: 15vh;
     display:flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    /* position: absolute; */
     width:100%;
-    bottom:0px;
+    /* bottom:0px; */
   }
 
   footer a {

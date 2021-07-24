@@ -40,7 +40,6 @@ h2 span {
   left: 0px;
   width: 100%;
   height: 100vh;
-  padding: 10px;
   font-size: 22px;
   border-radius:5px;
   display: flex;
@@ -58,5 +57,12 @@ h2 span {
   padding: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  margin: 10px;
+}
+@media screen and (max-width: 600px) {
+  /* #modal-container {
+    width: 100%;
+    box-sizing: border-box;
+  } */
 }
 </style>

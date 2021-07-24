@@ -21,7 +21,7 @@ export default {
     animation-duration: 3s;
     position: relative;
     border-bottom: 2px solid brown;
-    height:15vh;
+    
   }
 
   #appName {
