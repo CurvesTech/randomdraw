@@ -121,6 +121,7 @@ export default {
   }
   .list_item i {
     font-size: 30px;
+    cursor: pointer;
   }
   .mt-10 {
     margin-top: 10px;
@@ -257,8 +258,6 @@ export default {
   #content-box > div {
     width: 80%;
   }
-  
-  
 
   @media screen and (max-width: 600px) {
     .input_form button {
