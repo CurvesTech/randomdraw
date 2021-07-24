@@ -22,13 +22,15 @@ export default {
     height: 15vh;
     display:flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    position: absolute;
+    width:100%;
+    bottom:0px;
   }
 
   footer a {
     color: white;
     font-weight: bolder;
     text-decoration: none;
-
   }
 </style>

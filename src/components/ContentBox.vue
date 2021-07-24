@@ -143,7 +143,7 @@ export default {
   
 
   #content-box {
-    min-height: 70vh;
+    min-height: 50vh;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -244,6 +244,10 @@ export default {
     font-weight: bold;
     height: 100px;
   }
+
+  #content-box > div {
+    width: 80%;
+  }
   
   
 
@@ -252,7 +256,7 @@ export default {
       flex: 2;
     }
 
-    #content-box div{
+    #content-box > div{
       width: 100%;
       box-sizing: border-box;
     }
