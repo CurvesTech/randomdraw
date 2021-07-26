@@ -1,5 +1,7 @@
 # randomdraw
 
+# [Demo](https://randomdraw.netlify.app).
+
 ## Project setup
 ```
 yarn install
